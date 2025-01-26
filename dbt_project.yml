@@ -1,0 +1,38 @@
+name: 'fairmoney_project'
+version: '1.0.0'
+
+profile: 'fairmoney_project'
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  fairmoney_project:
+    example:
+      +materialized: view  # Default setting for models in this directory
+
+    # Source, spider, dimension, and fact models as tables
+    source:
+      +materialized: table
+    spider:
+      +materialized: table
+    dimension:
+      +materialized: table
+
+    # Fact models: Support incremental materialization
+    fact:
+      +materialized: table
+
+    # Mart and staging models as views
+    mart:
+      +materialized: view
+    staging:
+      +materialized: view

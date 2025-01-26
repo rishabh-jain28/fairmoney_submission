@@ -1,0 +1,16 @@
+version: 2
+
+sources:
+  - name: fairmoney
+    schema: source
+    tables:
+      - name: FAIR_MONEY_USERS_KYC_DIM
+        description: "Table that contains transaction data"
+      - name: COLLECTION_EXECUTIVES_DIM
+        description: "Table with customer details"
+      - name: FAIR_MONEY_USERS_DIM
+        description: "Table with customer details"
+      - name: LOAN_OFFERS_DIM
+        description: "Table with customer details"
+      - name: LOAN_OFFER_SPIDER
+        description: "Incremental load data for loan offers table"

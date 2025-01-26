@@ -1,0 +1,1 @@
+select * from {{ ref('loan_offers_dim_rpt') }} where CURRENT_ROW=1 and LOSS_FLAG=0

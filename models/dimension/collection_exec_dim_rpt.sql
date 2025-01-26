@@ -1,0 +1,1 @@
+select * from {{ ref('fm_user_kyc_dim') }} 
